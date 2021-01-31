@@ -41,3 +41,7 @@ Optional:
 - pymysqldb
 - WindPy
 - alphalens
+
+
+环境
+pip install pandas sqlalchemy statsmodels pytdx tqdm tushare ratelimiter mysqlclient

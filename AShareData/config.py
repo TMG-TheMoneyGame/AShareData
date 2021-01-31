@@ -26,7 +26,7 @@ def generate_db_interface_from_config(config_loc: Union[str, Dict]) -> Optional[
         global_config = config_loc
     if 'mysql' in global_config['db_interface']['driver']:
         engine = prepare_engine(global_config['db_interface'])
-        return MySQLInterface(engine)
+        return MySQLInterface(engine, init=True)
 
 
 def set_global_config(config_loc: str):
