@@ -97,6 +97,7 @@
 	},
 	"指数日行情": {
 		"DateTime": "date",
+		"IndexCode": "varchar",
 		"ID": "varchar",
 		"开盘点位": "float",
 		"最高点位": "float",

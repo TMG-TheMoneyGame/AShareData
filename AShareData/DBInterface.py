@@ -277,12 +277,12 @@ class MySQLInterface(DBInterface):
         """
         assert table_name.lower() in self.meta.tables.keys(), f'数据库中无名为 {table_name} 的表'
         table = self.meta.tables[table_name.lower()]
-        if 'DateTime' in table.columns.keys():
-            session = Session(self.engine)
-            q = session.query(func.max(table.c[column]))
-            ret = q.one()[0]
-            session.close()
-            return ret
+        # if 'DateTime' in table.columns.keys():
+        session = Session(self.engine)
+        q = session.query(func.max(table.c[column]))
+        ret = q.one()[0]
+        session.close()
+        return ret
 
     def get_all_id(self, table_name: str) -> Optional[List[str]]:
         """
